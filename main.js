@@ -66,7 +66,7 @@ window.addEventListener('load', () =>{
             list_el.removeChild(task_el);
         });
 
-        todos.push(list_el);
+        todos.push(task);
         localStorage.setItem('todos', JSON.stringify(todos));
 
         e.target.removeEventListener();
