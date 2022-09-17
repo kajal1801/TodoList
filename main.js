@@ -1,8 +1,10 @@
 window.addEventListener('load', () =>{
+    todos = JSON.parse(localStorage.getItem('todos')) || [];
     const form = document.querySelector('#new-task-form');
     const input = document.querySelector('#new-task-input');
     const list_el = document.querySelector('#tasks');
-
+    
+    
     form.addEventListener('submit', (e) =>{
         e.preventDefault();
 
@@ -27,6 +29,7 @@ window.addEventListener('load', () =>{
         task_input_el.setAttribute("readonly", "readonly");
 
         task_content_el.appendChild(task_input_el);
+
 
         const task_actions_el = document.createElement("div");
         task_actions_el.classList.add("actions");
@@ -62,5 +65,10 @@ window.addEventListener('load', () =>{
         task_delete_el.addEventListener('click', () => {
             list_el.removeChild(task_el);
         });
+
+        todos.push(list_el);
+        localStorage.setItem('todos', JSON.stringify(todos));
+
+        e.target.removeEventListener();
     });
 });
