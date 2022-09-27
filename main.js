@@ -26,11 +26,13 @@ function showTasks() {
   let html = "";
   taskObj.forEach(function (element, index) {
     html += `
-        <div class="content">
-            <p class="task">${element}</p>
-        </div>
-        <div class="actions">
-            <button id="${index}" onclick="deleteNode(${index})" class="delete" >Delete</button>
+        <div class="join">
+            <div class="content">
+                <p class="task">${element}</p>
+            </div>
+            <div class="actions">
+                <button id="${index}" onclick="deleteNode(${index})" class="delete" >Delete</button>
+            </div>
         </div>
         `;
   });
