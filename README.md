@@ -1,3 +1,4 @@
 # TODO LIST
 
-- A practice project made while learning about DOM and LocalStorage in Javascript (LocalStorage not added yet).
+- A practice project made while learning about DOM and LocalStorage in Javascript.
+- CRUD operations done.
